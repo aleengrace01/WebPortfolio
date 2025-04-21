@@ -76,7 +76,7 @@ nav a {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    background-color: rgba(251, 237, 129, 0.662); /* Light yellow with 80% opacity */
+    background-color: rgba(251, 237, 129, 0.662); 
     list-style: none;
     padding: 0;
     min-width: 180px;
