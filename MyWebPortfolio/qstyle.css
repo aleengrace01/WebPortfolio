@@ -1,0 +1,195 @@
+/* General Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: 'montserrat-bold';
+    src: url('font/Montserrat-Bold.ttf');
+}
+
+@font-face {
+    font-family: 'montserrat-regular';
+    src: url('font/Montserrat-Regular.ttf');
+}
+
+body {
+    font-family: 'montserrat-regular', sans-serif;
+    background-color: white;
+}
+
+header {
+    background-color: #0a2463;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+}
+
+.nav-container img {
+    width: 80px;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-right: 100px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Dropdown Menu */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 40px;
+    margin-right: 100px;
+    position: relative;
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    background-color: rgba(251, 237, 129, 0.662);
+    list-style: none;
+    padding: 0;
+    min-width: 180px;
+    display: none;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 100;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu li {
+    padding: 10px 20px;
+    transition: background 0.3s ease;
+}
+
+.dropdown-menu li a {
+    color: #0a2463;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+}
+
+.dropdown-menu li:hover {
+    background-color: #f7941d;
+}
+
+.dropdown-menu li a:hover {
+    color: white;
+}
+
+/* Portfolio Section */
+.portfolio {
+    padding: 50px;
+    background-color: #fffdf0;
+    
+    
+}
+
+.portfolio h2 {
+    color: #f7941d;
+    font-weight: bold;
+    font-size: 40px;
+    font-family: 'montserrat-bold';
+    margin-bottom: 20px;
+    margin-left: 40px;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    justify-content: center;
+    padding: 0 50px;
+    margin-top: 40px;
+    margin-left: 70px;
+}
+
+.quiz-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: stretch; 
+    width: 80%;
+    height: 100%; 
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 100%; 
+    object-fit: cover; 
+    cursor: pointer;
+    border-radius: 5px;
+    transition: transform 0.3s;
+    background-color: #fbed81;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.199);
+}
+
+.portfolio-img:hover {
+    transform: scale(1.1);
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.3);
+}
+.quiz-level {
+    margin-top: 15px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    color: #0a2463;
+    font-size: 18px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+footer {
+    background-color: #0a2463;
+    padding: 10px;
+    text-align: center;
+    font-size: 15px;
+    color: #879189;
+}
