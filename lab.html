@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="sLab.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <a href="index.html">
+                <img src="images/logo.png" alt="CvSU Logo">
+            </a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#portfolio">Portfolio</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="lab.html">Laboratory Activity</a></li>
+                            <li><a href="quiz.html">Quiz</a></li>
+                            <li><a href="exam.html">Exams</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="portfolio" class="portfolio">
+        <h2>Laboratory Activity</h2>
+    
+        
+        <div class="portfolio-item">
+            <div class="portfolio-text">
+                <h3>Laboratory Activity 1</h3>
+                <p>Website Design</p>
+            </div>
+            <img src="images/lab1.png" alt="Project 1" class="portfolio-img" onclick="openModal('images/lab1.png')">
+        </div>
+    
+      
+        <div class="portfolio-item">
+            <div class="portfolio-text">
+                <h3>Laboratory Activity 2</h3>
+                <p>Login and Registration Form </p>
+            </div>
+            <div class="portfolio-images">
+                <img src="images/lab2a.png" alt="Project 2 - Image 1" class="portfolio-img" onclick="openModal('images/lab2a.png')">
+                <img src="images/lab2b.png" alt="Project 2 - Image 2" class="portfolio-img" onclick="openModal('images/lab2b.png')">
+                <img src="images/lab2c.jpg" alt="Project 2 - Image 3" class="portfolio-img" onclick="openModal('images/lab2c.jpg')">
+            </div>
+        </div>
+    
+        </section>
+    
+    <!-- Modal -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg">
+    </div>
+    
+    <script>
+        function openModal(imageSrc) {
+            document.getElementById("imageModal").style.display = "flex";
+            document.getElementById("modalImg").src = imageSrc;
+        }
+    
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+    
+
+
+    <footer>
+        <p class="footer-note">2025 Cavite State University | Silang, Cavite, Philippines</p>
+    </footer>
+</body>
+</html>
