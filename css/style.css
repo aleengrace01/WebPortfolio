@@ -10,13 +10,13 @@
 
 @font-face {
     font-family: 'montserrat-bold';
-    src: url('font/Montserrat-Bold.ttf');
+    src: url('../font/Montserrat-Bold.ttf');
   }
 
   
   @font-face {
     font-family: 'montserrat-regular';
-    src: url('font/Montserrat-Regular.ttf')
+    src: url('../font/Montserrat-Regular.ttf')
   }
   
 body {
