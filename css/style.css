@@ -255,15 +255,15 @@ nav a {
 }
 
 .portfolio-item:nth-child(1) .item {
-    background-image: url('images/lab.png');
+    background-image: url('../images/lab.png');
 }
 
 .portfolio-item:nth-child(2) .item {
-    background-image: url('images/quiz.png');
+    background-image: url('../images/quiz.png');
 }
 
 .portfolio-item:nth-child(3) .item {
-    background-image: url('images/exam.png');
+    background-image: url('../images/exam.png');
 }
 .item .overlay {
     position: absolute;
