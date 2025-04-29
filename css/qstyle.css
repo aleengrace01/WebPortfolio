@@ -1,4 +1,4 @@
-/* General Reset */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -52,7 +52,7 @@ nav a {
     font-weight: bold;
 }
 
-/* Dropdown Menu */
+
 .nav-menu {
     list-style: none;
     display: flex;
@@ -98,7 +98,7 @@ nav a {
     color: white;
 }
 
-/* Portfolio Section */
+
 .portfolio {
     padding: 50px;
     background-color: #fffdf0;
