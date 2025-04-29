@@ -58,7 +58,7 @@ nav a {
     
 }
 
-/* Style for the dropdown container */
+
 .nav-menu {
     list-style: none;
     display: flex;
@@ -76,7 +76,7 @@ nav a {
 .dropdown-menu {
     position: absolute;
     top: 100%;
-    background-color: rgba(251, 237, 129, 0.662); /* Light yellow with 80% opacity */
+    background-color: rgba(251, 237, 129, 0.662); 
     list-style: none;
     padding: 0;
     min-width: 180px;
@@ -92,7 +92,7 @@ nav a {
     display: block;
 }
 
-/* Style for dropdown menu items */
+
 .dropdown-menu li {
     padding: 10px 20px;
     transition: background 0.3s ease;
@@ -105,7 +105,7 @@ nav a {
     display: block;
 }
 
-/* Hover effect for dropdown items */
+
 .dropdown-menu li:hover {
     background-color: #f7941d;
 }
