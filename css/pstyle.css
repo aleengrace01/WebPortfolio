@@ -205,3 +205,75 @@ footer {
     font-family: 'Poppins';
     color: #879189;
 }
+
+@media (max-width: 480px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden; 
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .nav-container img {
+        margin-left: 0;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+    }
+
+
+    header {
+        text-align: center;
+        padding: 15px 10px;
+    }
+
+    .portfolio {
+        padding: 20px;
+    }
+
+    .portfolio h2 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .portfolio-text h3 {
+        font-size: 20px;
+    }
+
+    .portfolio-text p {
+        font-size: 14px;
+    }
+
+    .portfolio-images {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 10px;
+    }
+
+    .portfolio-img {
+        height: auto;
+        width: 100%;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: auto;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
