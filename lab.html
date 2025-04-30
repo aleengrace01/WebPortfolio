@@ -67,12 +67,15 @@
                 </div>
         </section>
     
-    <!-- Modal -->
+   <!-- Modal -->
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
         <img class="modal-content" id="modalImg">
     </div>
     
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+
+
     <script>
         function openModal(imageSrc) {
             document.getElementById("imageModal").style.display = "flex";
@@ -82,7 +85,34 @@
         function closeModal() {
             document.getElementById("imageModal").style.display = "none";
         }
+
+        function openModal(imageSrc) {
+        document.getElementById("imageModal").style.display = "flex";
+        document.getElementById("modalImg").src = imageSrc;
+    }
+
+
+
+    // Scroll to top button functionality
+    const scrollTopBtn = document.getElementById("scrollTopBtn");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            scrollTopBtn.style.display = "block";
+        } else {
+            scrollTopBtn.style.display = "none";
+        }
+    };
+
+    function scrollToTop() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    }
     </script>
+    
+
     
 
 
