@@ -199,17 +199,22 @@ nav a {
 .hero a{
     text-decoration: none;
 }
-
 .btn {
+    display: inline-block; 
     background-color: #2b4da7;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     border-radius: 35px;
-    font-family: 'montserrat-bold'
+    font-family: 'montserrat-bold';
+    text-decoration: none; 
+    margin: 10px; 
 }
 
+.btn:hover {
+    background-color: #f7c948; 
+  }
 .portfolio {
     padding: 50px;
     padding-top: 10px;
@@ -372,6 +377,12 @@ nav a {
     margin-top: -30px;
     
 }
+
+
+.about-image{
+    margin-top: 10px;
+    text-decoration: none;
+  }
 .contact-container {
     text-align: left;
     margin: 0 auto;
