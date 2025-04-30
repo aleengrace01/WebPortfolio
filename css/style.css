@@ -467,115 +467,153 @@ footer {
 }
 
 @media (max-width: 480px) {
-
-    
-    .nav-container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 16px;
-    }
-
-    .nav-menu {
-        flex-direction: column;
-        width: 100%;
+    html, body {
+        margin: 0;
         padding: 0;
-        gap: 12px;
+        box-sizing: border-box;
+        overflow-x: hidden; 
     }
 
-    .nav-menu li {
-        width: 100%;
-    }
-
-    .dropdown-menu {
-        position: static;
-        padding-left: 10px;
-    }
-
-    
-    .hero {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 22px;
-    }
-
-    .hero-text p {
-        font-size: 16px;
-    }
-
-    .hero-image {
-        margin-top: 20px;
-    }
-
-  
-    .about-content {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .about-text, .about-image {
-        width: 100%;
-        text-align: center;
-    }
-
-    .about-text p {
-        font-size: 15px;
-    }
-
-    
-    .portfolio-items {
-        flex-direction: column;
-        gap: 24px;
-    }
-
-    .portfolio h2 {
-        font-size: 24px;
-        text-align: center;
-    }
-
-   
-    .latest-project {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .project-box {
-        width: 100%;
+    img {
+        max-width: 100%;
         height: auto;
     }
 
-    .project-text {
-        text-align: center;
-        margin-top: 16px;
+    .nav-container {
+        flex-direction: column;
+        padding: 5px;
     }
 
-    
+    .nav-container img {
+        margin-left: 0;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+    }
+
+    .hero {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin-left: 0;
+        text-align: center;
+    }
+
+    .btn {
+        display: block;
+        margin: 10px auto;
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    .about-container,
+    .about-content,
+    .latest-project,
+    .portfolio-items,
     .contact-container {
         flex-direction: column;
+        align-items: center;
+        padding: 15px;
+        margin: 0;
+    }
+
+    .about-image img {
+        max-width: 200px;
+        height: auto;
+    }
+
+    .portfolio h2,
+    .latest-project h3,
+    .project-text h3 {
+        font-size: 22px;
+        text-align: center;
+        margin: 10px 0;
+    }
+    .latest-project {
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 20px;
+    }
+    
+    .project-box {
+        width: 100%;
+        height: auto;
+        margin-left: 0;
+        padding: 0;
+    }
+    
+    .project-box img {
+        height: auto;
+    }
+    
+    .project-text {
+        margin-left: 0;
+        text-align: center;
+        padding: 0 10px;
+    }
+    
+    .project-text h3 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+    
+    .project-text p {
+        font-size: 16px;
+        margin-top: 0;
+    }
+    .project-box {
+        width: 100%;
+        margin-left: 0;
         padding: 20px;
     }
 
-    .contact-info, .logo-section {
+    .contact-info {
         width: 100%;
+        padding: 0;
+        margin: 0;
         text-align: center;
     }
 
+    .contact-info h2 {
+        margin: 20px 0 10px 0;
+        font-size: 20px;
+    }
+
+    .contact-info hr {
+        width: 60%;
+        margin: 0 auto;
+    }
+
     .contact-info ul {
-        padding-left: 0;
-        text-align: left;
+        margin: 10px 0;
+        padding: 0;
+        justify-content: center;
+    }
+
+    .contact-info ul li {
+        margin: 5px;
     }
 
     .logo-section img {
         margin: 20px auto;
+        width: 100px;
+        display: block;
     }
 
-   
     footer p.footer-note {
-        font-size: 14px;
+        font-size: 13px;
+        padding: 5px;
         text-align: center;
-        padding: 10px;
+    }
+
+    footer {
+        padding: 5px 0;
     }
 }
