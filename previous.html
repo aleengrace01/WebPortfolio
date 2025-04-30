@@ -21,7 +21,6 @@
                             <li><a href="lab.html">Laboratory Activity</a></li>
                             <li><a href="quiz.html">Quiz</a></li>
                             <li><a href="exam.html">Exams</a></li>
-                            <li><a href="previous.html">Previous Activity</a></li>
                         </ul>
                     </li>
                     <li><a href="index.html#contact">Contact</a></li>
@@ -99,6 +98,8 @@
         </div>
     </section>
 
+    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+
     <!-- Modal -->
     <div id="imageModal" class="modal" onclick="closeModal()">
         <span class="close">&times;</span>
@@ -113,6 +114,20 @@
     
         function closeModal() {
             document.getElementById("imageModal").style.display = "none";
+        }
+
+            window.onscroll = function() {
+            const btn = document.getElementById("scrollTopBtn");
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                btn.style.display = "block";
+            } else {
+                btn.style.display = "none";
+            }
+        };
+
+        // Scroll to top instantly
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
     </script>
 
