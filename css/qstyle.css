@@ -1,4 +1,3 @@
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -193,6 +192,7 @@ footer {
     font-size: 15px;
     color: #879189;
 }
+
 @media (max-width: 480px) {
     html, body {
         margin: 0;
