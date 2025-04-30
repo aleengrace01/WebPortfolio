@@ -193,3 +193,77 @@ footer {
     font-size: 15px;
     color: #879189;
 }
+@media (max-width: 480px) {
+    html, body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        overflow-x: hidden; 
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .nav-container {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    .nav-container img {
+        margin-left: 0;
+    }
+
+    .nav-menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        margin-left: 10px;
+    }
+
+    header {
+        padding: 15px 10px;
+        text-align: center;
+    }
+
+    .portfolio {
+        padding: 20px;
+    }
+
+    .portfolio h2 {
+        font-size: 28px;
+        margin-left: 10px;
+        text-align: center;
+    }
+
+    .gallery {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        margin-left: 0;
+    }
+
+    .quiz-item {
+        width: 100%;
+    }
+
+    .portfolio-img {
+        height: auto;
+    }
+
+    .quiz-level {
+        font-size: 16px;
+        text-align: center;
+        margin: 10px 0 20px;
+    }
+
+    .modal-content {
+        width: 90%;
+        height: auto;
+    }
+
+    footer {
+        font-size: 13px;
+        padding: 10px;
+    }
+}
