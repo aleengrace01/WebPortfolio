@@ -39,7 +39,10 @@
                 <h3>Laboratory Activity 1</h3>
                 <p>Website Design</p>
             </div>
-            <img src="images/lab1.png" alt="Project 1" class="portfolio-img" onclick="openModal('images/lab1.png')">
+            <div class="portfolio-images">
+                <img src="images/lab1.png" alt="Project 1" class="portfolio-img" onclick="openModal('images/lab1.png')">
+            </div>
+            
         </div>
     
       
@@ -56,7 +59,7 @@
         </div>
              <div class="portfolio-item">
                     <div class="portfolio-text">
-                        <h3>Paired Activity</h3>
+                        <h3>Paired Activity - Midterms</h3>
                        
                     </div>
                     <div class="portfolio-images">
@@ -65,32 +68,106 @@
                         <img src="images/pair3.jpg" alt="Project 2 - Image 3" class="portfolio-img" onclick="openModal('images/pair3.jpg')">
                     </div>
                 </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-text">
+                        <h3>Paired Activity - Finals</h3>
+                       
+                    </div>
+                    <div class="portfolio-images">
+                        <img src="images/pairA.jpg" alt="Project 2 - Image 1" class="portfolio-img" onclick="openModal('images/pairA.jpg')">
+                        <img src="images/pairB.jpg" alt="Project 2 - Image 2" class="portfolio-img" onclick="openModal('images/pairB.jpg')">
+                        
+                    </div>
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-text">
+                        <h3>Laboratory Finals</h3>
+                        <p>Text-to-Speech</p>
+                    </div>
+                    <div class="portfolio-images">
+                         <img src="images/text.jpg" alt="Project 1" class="portfolio-img" onclick="openModal('images/text.jpg')">
+                    </div>
+                   
+                </div>
+
+                <div class="portfolio-item">
+                    <div class="portfolio-text">
+                        <h3>Laboratory Finals</h3>
+                        <p>My Multimedia Journal App</p>
+                    </div>
+                    
+                    <div class="portfolio-images">
+                        <img src="images/journal1.jpg" alt="journal1" class="portfolio-img" onclick="openModal('images/journal1.jpg')">
+                        <img src="images/journal2.jpg" alt="journal2" class="portfolio-img" onclick="openModal('images/journal2.jpg')">
+                        <img src="images/journal3.jpg" alt="journal3" class="portfolio-img" onclick="openModal('images/journal3.jpg')">
+                        <img src="images/journal4.jpg" alt="journal4" class="portfolio-img" onclick="openModal('images/journal4.jpg')">
+                        <img src="images/journal5.jpg" alt="journal5" class="portfolio-img" onclick="openModal('images/journal5.jpg')">
+                        <img src="images/journal6.jpg" alt="journal6" class="portfolio-img" onclick="openModal('images/journal6.jpg')">
+                        <img src="images/journal7.jpg" alt="journal6" class="portfolio-img" onclick="openModal('images/journal7.jpg')">
+                    </div>
+                </div>
+
+                    <div class="portfolio-item">
+                        <div class="portfolio-text">
+                            <h3>Laboratory Activity 1</h3>
+                            <p>Accesible To-Do-List</p>
+                        </div>
+
+                        <div class="portfolio-images">
+                            <img src="images/todo.png" alt="Project 1" class="portfolio-img" onclick="openModal('images/todo.png')">
+                             <img src="images/todo2.jpg" alt="Project 1" class="portfolio-img" onclick="openModal('images/todo2.jpg')">
+                        </div>
+            
+        
+                    
+                </div>
         </section>
     
    <!-- Modal -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="close">&times;</span>
-        <img class="modal-content" id="modalImg">
-    </div>
-    
-    <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
+            <div id="imageModal" class="modal" >
+               
 
+                 <span class="close" onclick="closeModal()">&times;</span>
+                    <span class="prev" onclick="changeImage(-1)">❮</span>
+                    <img class="modal-content" id="modalImg">
+                    <span class="next" onclick="changeImage(1)">❯</span>
+            </div>
+            
+            <button onclick="scrollToTop()" id="scrollTopBtn" title="Go to top">↑</button>
 
-    <script>
-        function openModal(imageSrc) {
-            document.getElementById("imageModal").style.display = "flex";
-            document.getElementById("modalImg").src = imageSrc;
-        }
-    
-        function closeModal() {
-            document.getElementById("imageModal").style.display = "none";
-        }
+        <script>
+            let currentImageIndex = 0;
+            let currentImageGroup = [];
 
-        function openModal(imageSrc) {
-        document.getElementById("imageModal").style.display = "flex";
-        document.getElementById("modalImg").src = imageSrc;
-    }
+            // Open modal with reference to all sibling images in the same group
+            function openModal(imageSrc) {
+                const images = Array.from(document.querySelectorAll('.portfolio-img'));
+                currentImageGroup = images.filter(img =>
+                    img.closest('.portfolio-images') ===
+                    document.querySelector(`img[src="${imageSrc}"]`).closest('.portfolio-images')
+                );
+                currentImageIndex = currentImageGroup.findIndex(img => img.src.includes(imageSrc));
+                showImage();
+                document.getElementById("imageModal").style.display = "flex";
+            }
 
+            function closeModal() {
+                document.getElementById("imageModal").style.display = "none";
+            }
+
+            function changeImage(direction) {
+                currentImageIndex += direction;
+                if (currentImageIndex < 0) currentImageIndex = currentImageGroup.length - 1;
+                if (currentImageIndex >= currentImageGroup.length) currentImageIndex = 0;
+                showImage();
+            }
+
+            function showImage() {
+                const src = currentImageGroup[currentImageIndex].src;
+                document.getElementById("modalImg").src = src;
+            }
 
 
     // Scroll to top button functionality
